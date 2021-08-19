@@ -1,7 +1,7 @@
 public class EjemploStringInmutable {
     public static void main(String[] args) {
         String curso = "Programación Java";
-        // //
+        // //hora hora
         String profesor = "Andrés Guzmán";
 
         String resultado = curso.concat(profesor);
@@ -12,6 +12,7 @@ public class EjemploStringInmutable {
         String resultado2;
         resultado2 = curso.transform((String c) ->{return c + " con " + profesor;});
 
+//         Para subir al repositorio CTRL + ALT + K
 
 //        String resultado2 = curso.concat(profesor);
 
