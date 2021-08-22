@@ -10,7 +10,8 @@ public class EjemploStringInmutable {
         System.out.println(curso == resultado);
 
         String resultado2;
-        resultado2 = curso.transform((String c) ->{return c + " con " + profesor;});
+        resultado2 = curso.concat(profesor);
+//        resultado2 = curso.transform((String c) ->{return c + " con " + profesor;});
 
 //         Para subir al repositorio CTRL + K
 
