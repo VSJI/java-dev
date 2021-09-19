@@ -15,6 +15,9 @@ public class PrecedenciaOperadores {
         System.out.println("i = " + i);
         System.out.println("j = " + j);
 
+        String name = "Juan Velasco";
+        System.out.println("Mi nombre es " +name );
+
 
     }
 }
