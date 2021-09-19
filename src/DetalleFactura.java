@@ -8,32 +8,38 @@ public class DetalleFactura {
         Scanner datosFactura = new Scanner(System.in);
         String logFactura = "";
 
-        System.out.println("Escriba un nombre o descripción para la factura");
+        System.out.println("Escriba un nombre o descripción para la factura:");
 
         // Obtenemos el nombre para la factura
         String nombreFactura = datosFactura.nextLine();
         logFactura += "nombreFactura=" + nombreFactura + ";";
 
-        System.out.println("Introduzca el importe del primer producto de la factura");
+        System.out.println("Introduzca el importe sin impuestos del primer producto de la factura:");
 
-        // Obtenemos el precio del primer producto
-//        double primerProducto = datosFactura.nextDouble();
-
-
-        // Validamos que el dato introducido es un decimal
+        // Validamos que el dato introducido es un decimal y que no es menor que 0
         double primerProducto = 0;
-        while( (!datosFactura.hasNextDouble()) || (datosFactura.nextDouble() < 0) ){
-//            primerProducto = datosFactura.nextDouble();
-            System.out.println("Error: el dato introducido no se corresponde con un importe. \n Por favor, introduzca un importe válido");
+
+/*            while( (!datosFactura.hasNextDouble() ) ){
+                System.out.println("Error: el dato introducido no se corresponde con un importe. \n Por favor, introduzca un importe válido:");
+            }
+            while ( datosFactura.nextDouble() < 0 ){
+                System.out.println("Error: el importe introducido es negativo. \n Por favor, introduzca un importe válido:");
+                datosFactura.next();
+            }
+            primerProducto = datosFactura.nextDouble();*/
+
+
+        while ( (!datosFactura.hasNextDouble() ) || (datosFactura.nextDouble() < 0) ){
+            System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
             datosFactura.next();
         }
-        primerProducto = datosFactura.nextDouble();
 
-//        double primerProducto = 0;
+
+
 
         logFactura += "primerProducto=" + primerProducto + ";";
 
-        System.out.println("Introduzca el importe del segundo producto de la factura");
+        System.out.println("Introduzca el importe sin impuestos del segundo producto de la factura:");
 
         // Obtenemos el precio del segundo producto
         double segundoProducto = datosFactura.nextDouble();
