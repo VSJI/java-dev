@@ -16,26 +16,14 @@ public class DetalleFactura {
 
         System.out.println("Introduzca el importe sin impuestos del primer producto de la factura:");
 
-        // Validamos que el dato introducido es un decimal y que no es menor que 0
+        // Inicializamos el precio del primer producto y validamos que el dato introducido es un decimal y que no es menor que 0
         double primerProducto = 0;
-
-/*            while( (!datosFactura.hasNextDouble() ) ){
-                System.out.println("Error: el dato introducido no se corresponde con un importe. \n Por favor, introduzca un importe válido:");
-            }
-            while ( datosFactura.nextDouble() < 0 ){
-                System.out.println("Error: el importe introducido es negativo. \n Por favor, introduzca un importe válido:");
-                datosFactura.next();
-            }
-            primerProducto = datosFactura.nextDouble();*/
-
 
         while ( (!datosFactura.hasNextDouble() ) || (datosFactura.nextDouble() < 0) ){
             System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
-            datosFactura.nextLine();
+//            datosFactura.nextLine();
+            primerProducto = datosFactura.nextDouble();
         }
-
-
-
 
         logFactura += "primerProducto=" + primerProducto + ";";
 
