@@ -31,7 +31,7 @@ public class DetalleFactura {
 
         while ( (!datosFactura.hasNextDouble() ) || (datosFactura.nextDouble() < 0) ){
             System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
-            datosFactura.next();
+            datosFactura.nextLine();
         }
 
 
