@@ -20,11 +20,10 @@ public class DetalleFactura {
         double primerProducto = 0;
 
         boolean reTry = true;
-
-        while ( reTry ){
-            if (datosFactura.hasNextDouble()){
+        while (reTry) {
+            if (datosFactura.hasNextDouble()) {
                 primerProducto = datosFactura.nextDouble();
-                if ( primerProducto < 0 ){
+                if (primerProducto < 0) {
                     System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
                     datosFactura.nextLine();
                 } else {
@@ -41,7 +40,24 @@ public class DetalleFactura {
         System.out.println("Introduzca el importe sin impuestos del segundo producto de la factura:");
 
         // Obtenemos el precio del segundo producto
-        double segundoProducto = datosFactura.nextDouble();
+        double segundoProducto = 0;
+
+        reTry = true;
+        while (reTry) {
+            if (datosFactura.hasNextDouble()) {
+                segundoProducto = datosFactura.nextDouble();
+                if (segundoProducto < 0) {
+                    System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
+                    datosFactura.nextLine();
+                } else {
+                    reTry = false;
+                }
+            } else {
+                System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
+                datosFactura.nextLine();
+            }
+        }
+
         logFactura += "segundoProducto=" + segundoProducto + ";";
 
         // Sumamos los importes de los productos
@@ -56,7 +72,7 @@ public class DetalleFactura {
         double totalFacturaSinRedondeo = sumaProductos + impuestosFactura;
         logFactura += "totalFacturaSinRedondeo=" + totalFacturaSinRedondeo + ";";
 
-        double totalFactura = Math.round((totalFacturaSinRedondeo * 100)/100);
+        double totalFactura = Math.round((totalFacturaSinRedondeo * 100) / 100);
         logFactura += "totalFactura=" + totalFactura + ";";
 
         System.out.println("La factura con nombre o identificador \"" + nombreFactura + "\", es de un importe sin impuestos incluidos de " + sumaProductos +
@@ -66,6 +82,6 @@ public class DetalleFactura {
 
         datosFactura.close();
 
-        }
     }
+}
 
