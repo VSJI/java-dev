@@ -19,10 +19,21 @@ public class DetalleFactura {
         // Inicializamos el precio del primer producto y validamos que el dato introducido es un decimal y que no es menor que 0
         double primerProducto = 0;
 
-        while ( (!datosFactura.hasNextDouble() ) || (datosFactura.nextDouble() < 0) ){
-            System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
-//            datosFactura.nextLine();
-            primerProducto = datosFactura.nextDouble();
+        boolean reTry = true;
+
+        while ( reTry ){
+            if (datosFactura.hasNextDouble()){
+                primerProducto = datosFactura.nextDouble();
+                if ( primerProducto < 0 ){
+                    System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
+                    datosFactura.nextLine();
+                } else {
+                    reTry = false;
+                }
+            } else {
+                System.out.println("Error: el dato introducido no se corresponde con un importe válido. \n Por favor, introduzca un importe válido:");
+                datosFactura.nextLine();
+            }
         }
 
         logFactura += "primerProducto=" + primerProducto + ";";
