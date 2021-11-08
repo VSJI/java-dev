@@ -26,7 +26,8 @@ public class SentenciaIfElseNumDiasMes {
         }
 
 //        string monthName = new DateTime(2010, 8, 1).ToString("MMM", CultureInfo.InvariantCulture);
-
+//        string fullMonthName = new DateTime(2015, i, 1).ToString("MMMM", CultureInfo.CreateSpecificCulture("es"));
+        
         System.out.println("numeroDias = " + numeroDias);
 
     }
