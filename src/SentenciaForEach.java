@@ -15,5 +15,7 @@ public class SentenciaForEach {
             System.out.println("nombre = " + nombre);
         }
 
+        System.out.println("\n/****/\n");
+
     }
 }
