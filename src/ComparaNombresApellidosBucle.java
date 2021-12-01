@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class ComparaNombresApellidos {
+public class ComparaNombresApellidosBucle {
     public static void main(String[] args) {
 
         System.out.println("INSTRUCCIONES\n\n1. Este programa permite comparar la longitud de los nombres de 3 amigos o familiares.\n");
