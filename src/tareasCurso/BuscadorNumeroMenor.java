@@ -1,3 +1,5 @@
+package tareasCurso;
+
 import java.util.Scanner;
 
 public class BuscadorNumeroMenor {

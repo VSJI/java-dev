@@ -1,3 +1,5 @@
+package tareasCurso;
+
 import javax.swing.*;
 
 public class ComparaNombresApellidosBucle {
