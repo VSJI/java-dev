@@ -20,14 +20,9 @@ public class MultiplicadorNumeros {
                 if ( cantidadNumeros > 1 && cantidadNumeros % 1 == 0 ) {
                     cantidadOk = true;
                 }
-                else {
-                    System.out.println("Error, debe introducir un número positivo válido sin decimales como cantidad de números a multiplicar");
-                    System.out.println("2. Introduzca la cantidad de números enteros que desea multiplicar:");
-                    scanner.nextLine();
-                }
             }
             else {
-                System.out.println("Error, no es válido introducir una cadena. Debe introducir un número positivo válido sin decimales como cantidad de números a multiplicar");
+                System.out.println("Error, no es válido introducir un número decimal o una cadena. Debe introducir un número positivo válido sin decimales como cantidad de números a multiplicar");
                 System.out.println("2. Introduzca la cantidad de números enteros que desea multiplicar:");
                 scanner.nextLine();
             }
