@@ -44,7 +44,8 @@ public class MultiplicadorNumeros {
 
             for ( int i = 0; i < cantidadNumeros; i++ ) {
 
-                System.out.println("3." + (i+1) + ". Introduzca un número positivo o negativo a multiplicar(" + (cantidadNumeros-i) + " de " + cantidadNumeros + " restantes):");
+                System.out.println("3." + (i+1) + ". Introduzca " + ( (i == 0)? "un" : "otro" ) + " número positivo o negativo" +
+                        " a multiplicar(" + (cantidadNumeros-i) + " de " + cantidadNumeros + " restantes):");
 
                 boolean numeroOk = false;
                 while (numeroOk == false) {
@@ -53,7 +54,8 @@ public class MultiplicadorNumeros {
                         numeroOk = true;
                     } else {
                         System.out.println("Error, no es válido introducir una cadena. Debe introducir un número entero válido para multiplicar");
-                        System.out.println("3." + (i+1) + ". Introduzca un número positivo o negativo a multiplicar(" + (cantidadNumeros-i) + " de " + cantidadNumeros + " restantes):");
+                        System.out.println("3." + (i+1) + ". Introduzca " + ( (i == 0)? "un" : "otro" ) + " número positivo o negativo" +
+                                " a multiplicar(" + (cantidadNumeros-i) + " de " + cantidadNumeros + " restantes):");
                         scanner.nextLine();
                         scanner.nextLine();
                     }
